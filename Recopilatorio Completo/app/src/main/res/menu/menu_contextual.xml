@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Continente1"
+        android:title="América y Africa">
+    </item>
+    <item
+        android:id="@+id/Continente2"
+        android:title="Asia y Oceanía">
+    </item>
+    <item
+        android:id="@+id/Continente3"
+        android:title="Europa">
+    </item>
+</menu>

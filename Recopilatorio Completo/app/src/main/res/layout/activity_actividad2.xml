@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.usuario.recopilatorio.AcercaDe">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/zonaLb"
+        android:id="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/zonaLb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tarifaLb"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/tarifaLb"
+        android:layout_marginTop="70dp"
+        android:text="Zona:" />
+
+    <TextView
+        android:id="@+id/zonaTV"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tarifaLb"
+        android:layout_marginLeft="37dp"
+        android:layout_marginStart="37dp"
+        android:layout_toEndOf="@+id/decoracionLb"
+        android:layout_toRightOf="@+id/decoracionLb" />
+
+    <TextView
+        android:id="@+id/tarifaLb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pesoLb"
+        android:layout_alignStart="@+id/pesoLb"
+        android:layout_below="@+id/zonaLb"
+        android:layout_marginTop="23dp"
+        android:text="Tarifa:" />
+
+    <TextView
+        android:id="@+id/tarifaTV"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tarifaLb"
+        android:layout_alignBottom="@+id/tarifaLb"
+        android:layout_alignLeft="@+id/zonaTV"
+        android:layout_alignStart="@+id/zonaTV" />
+
+    <TextView
+        android:id="@+id/pesoLb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_alignLeft="@+id/decoracionLb"
+        android:layout_alignStart="@+id/decoracionLb"
+        android:text="Peso:" />
+
+    <TextView
+        android:id="@+id/pesoTV"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tarifaTV"
+        android:layout_alignStart="@+id/tarifaTV"
+        android:layout_below="@+id/tarifaTV"
+        android:layout_marginTop="31dp" />
+
+    <TextView
+        android:id="@+id/decoracionLb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/costeTV"
+        android:layout_alignLeft="@+id/costeLb"
+        android:layout_alignStart="@+id/costeLb"
+        android:layout_marginBottom="36dp"
+        android:text="Decoracion:" />
+
+    <TextView
+        android:id="@+id/decoracionTV"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/decoracionLb"
+        android:layout_alignBottom="@+id/decoracionLb"
+        android:layout_alignLeft="@+id/pesoTV"
+        android:layout_alignStart="@+id/pesoTV" />
+
+    <TextView
+        android:id="@+id/costeLb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pesoLb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="92dp"
+        android:text="COSTE FINAL:" />
+
+    <TextView
+        android:id="@+id/costeTV"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/costeLb"
+        android:layout_alignBottom="@+id/costeLb"
+        android:layout_alignLeft="@+id/decoracionTV"
+        android:layout_alignStart="@+id/decoracionTV" />
+
+</RelativeLayout>
