@@ -1,10 +1,17 @@
 package com.example.adrlop.bdinicial;
 
+import android.app.Activity;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class EjemploBaseDatos extends AppCompatActivity {
@@ -23,16 +30,16 @@ public class EjemploBaseDatos extends AppCompatActivity {
         //En caso de abrir de forma correcta la base de datos
         if (bd != null) {
             //Introducimos 3 clientes de ejemplo
-            for (int cont = 1; cont <= 3; cont++) {
-                //Creamos los datos
-                int codigo = cont;
-                String nombre = "Cliente" + cont;
-                String telefono = cont + "XXXXXXX";
-
-                //Introducimos los datos en la tabla Clientes
-                bd.execSQL("INSERT INTO Clientes (codigo, nombre, telefono) " +
-                        "VALUES (" + codigo + ", '" + nombre + "', '" + telefono + "')");
-            }
+//            for (int cont = 1; cont <= 3; cont++) {
+//                //Creamos los datos
+//                int codigo = cont;
+//                String nombre = "Cliente" + cont;
+//                String telefono = cont + "XXXXXXX";
+//
+//                //Introducimos los datos en la tabla Clientes
+//                bd.execSQL("INSERT INTO Clientes (codigo, nombre, telefono) " +
+//                        "VALUES (" + codigo + ", '" + nombre + "', '" + telefono + "')");
+//            }
         }
         String[] campos = new String[]{"nombre", "telefono"};
 
@@ -53,7 +60,7 @@ public class EjemploBaseDatos extends AppCompatActivity {
         bd.execSQL("INSERT INTO Clientes (nombre, telefono) VALUES ('cli1','11111') ");
         //Actualizar un registro
         bd.execSQL("UPDATE Clientes SET telefono='00000' WHERE nombre='cli1' ");
-        //Eliminar un registro
+        //Eliminar un registro 1 forma de eliminar no nativo de android
         bd.execSQL("DELETE FROM Clientes WHERE nombre='cli1' ");
 
         //Ejemplo de utilización del método insert()
@@ -81,6 +88,7 @@ public class EjemploBaseDatos extends AppCompatActivity {
 
         //Ejemplo de utilización del método delete()
         //Eliminamos el registro del cliente 'cli2'
+        //2 forma nativa de eliminar en android
         String[] args2 = new String[]{"cli2"};
         bd.delete("Clientes", "nombre=?", args2);
     }
@@ -105,5 +113,45 @@ public class EjemploBaseDatos extends AppCompatActivity {
 */
 
     //Cerramos la base de datos
-       // bd.close();
-} //del if
+    //bd.close();
+    //del if
+
+
+    static class ViewHolder {
+        TextView Nombre;
+        TextView Telefono;
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_ejemplo_base_datos);
+
+//        com.example.adrlop.bdinicial.ClientesSQLiteHelper cliBDh=new
+//        db=cliBDh.getReadableDatabase();
+//        tratarRegistros();
+//
+        final Spinner spin = (Spinner) findViewById(R.id.spinner);
+        AdaptadorSpinner adapta = new AdaptadorSpinner(this);
+        spin.setAdapter(adapta);
+    }
+
+    @Override
+    public boolean onCreateItemSelected(MenuItem item) {
+        AdapterView.AdapterContextMenuInfo delW = (AdapterView.AdapterContextMenuInfo)
+    }
+
+
+    class AdaptadorSpinner extends ArrayAdapter<Cliente> {
+        Activity context;
+
+        public Activity miActividad;
+
+        public AdaptadorSpinner(Activity context) {
+            super(context, R.layout.spinner_cliente, datos);
+            this.miActividad = context;
+        }
+
+        public View getDrop;
+    }
+}

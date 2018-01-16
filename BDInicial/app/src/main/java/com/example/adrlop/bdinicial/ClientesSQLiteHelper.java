@@ -26,7 +26,7 @@ public class ClientesSQLiteHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXIST Clientes");
         db.execSQL(cadSQL);
     }
-    
+
 }
 
 
