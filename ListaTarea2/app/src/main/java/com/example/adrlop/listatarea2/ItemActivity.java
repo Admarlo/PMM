@@ -1,4 +1,4 @@
-package com.acme.todolist;
+package com.example.adrlop.listatarea2;
 
 import android.app.Activity;
 import android.content.Context;
