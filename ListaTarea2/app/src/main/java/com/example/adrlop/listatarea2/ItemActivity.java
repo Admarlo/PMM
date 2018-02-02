@@ -108,7 +108,8 @@ public class ItemActivity extends Activity {
             MainActivity.mDbHelper.open();
             if (mRowId == null){
                 //insertar
-                MainActivity.mDbHelper.insertItem(itemText, placeText, descriptionText, 		Integer.parseInt(importanceText));
+                MainActivity.mDbHelper.insertItem(itemText, placeText, descriptionText,
+                        Integer.parseInt(importanceText));
             }
             else{
                 //actualizar

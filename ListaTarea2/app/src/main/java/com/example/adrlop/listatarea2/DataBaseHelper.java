@@ -29,6 +29,7 @@ import android.database.sqlite.SQLiteOpenHelper;
         public DataBaseHelper(Context ctx) {
             this.mCtx = ctx;
         }
+
         //clase privada para control de la SQLite
         private static class DataBaseHelperInternal extends SQLiteOpenHelper {
             public DataBaseHelperInternal(Context context) {
@@ -38,11 +39,13 @@ import android.database.sqlite.SQLiteOpenHelper;
             public void onCreate(SQLiteDatabase db) {
                 createTables(db);
             }
+
             @Override
             public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
                 deleteTables(db);
                 createTables(db);
             }
+
             private void createTables(SQLiteDatabase db) {
                 db.execSQL(DATABASE_CREATE_TODOLIST);
             }
