@@ -101,7 +101,7 @@ public class MainActivity extends ListActivity{
         setListAdapter(items);
     }
 
-
+//Creacion del menu
     @Override
      public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -144,7 +144,7 @@ public class MainActivity extends ListActivity{
                 return super.onContextItemSelected(item);
         }
     }
-
+//Cuando seleccionas item del menu llega aqui
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
@@ -152,6 +152,14 @@ public class MainActivity extends ListActivity{
             case R.id.new_item:
                 Intent intent = new Intent (this,ItemActivity.class);
                 startActivityForResult(intent, NEW_ITEM);
+                return true;
+            case R.id.AcercaDe:
+                Intent acerca = new Intent (this,AcercaDe.class);
+                startActivity(acerca);
+                return true;
+            case R.id.Mapa:
+                Intent mapa = new Intent (this,Actividad_Fragmento.class);
+                startActivity(mapa);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

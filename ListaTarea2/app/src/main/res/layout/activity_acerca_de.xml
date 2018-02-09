@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_acerca"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    tools:context="com.example.adrlop.listatarea2.AcercaDe">
+
+    <TextView
+        android:text="Versión: 1.1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/version"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Adria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/adria"
+
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/version"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Compañía: IES Serpis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/compania"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:layout_marginBottom="19dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/adria"
+        android:layout_alignEnd="@+id/adria" />
+
+
+
+</RelativeLayout>
+
